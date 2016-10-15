@@ -1,24 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
-    <script src="arrayFunctions.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css"
+          integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js"
+            integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU"
+            crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <title>JS6 lesson 1 Evgen Salyakin</title>
+    <script>
+        function writeBlock(index) {
+            document.write("<div class='block' id='block" + index + "'><p id='description" + index + "'>Description: </p>" +
+                    "<p id='example" + index + "'>Example:<br></p>" +
+                    "<p id='init" + index + "'>Initialization data: </p>" +
+                    "<p id='result" + index + "'>Result: </p></div>");
+        }
+    </script>
 </head>
 <body>
 <div class="container-fluid">
-<header class="wrapper text-xs-center">
-        <div class="container-fluid">
-            <h3>Lesson 1</h3>
-            <h5>Array Methods</h5>
-            <div class="center">
-                <a class="button" href="http://evgensalyakin.github.io/">Home page</a>
-            </div>
-        </div>
-</header>
+    <header class="wrapper text-xs-center">
+        <h5>Lesson 1</h5>
+        <h3>Array Methods</h3>
+        <a class="button" href="../index.html">Home page</a>
+    </header>
 
+    <div class="wrapper">
+        <script>
+            for (var i = 0; i < 5; i++) {
+                writeBlock(i);
+            }
+        </script>
+    </div>
 </div>
+<footer class="wrapper text-xs-center">
+    <a class="button" href="../index.html">Home page</a>
+    <p>Copyleft 2016 by Evgeniy Salyakin</p>
+</footer>
+<script src="arrayFunctions.js"></script>
 </body>
 </html>

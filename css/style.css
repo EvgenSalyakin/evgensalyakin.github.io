@@ -1,0 +1,16 @@
+header, footer {
+    margin: 25px auto;
+    color: rgb(122, 169, 158);
+    text-shadow: 1px 1px rgb(0, 0, 0);
+    font-weight: 900;
+}
+
+.block {
+    margin: 15px;
+    padding: 15px;
+    background: rgb(122, 169, 158);
+    border-radius: 7px;
+    border: 2px solid rgb(47, 64, 58);
+    box-shadow: 3px 3px 7px rgb(0, 0, 0);
+    text-align: justify;
+}
