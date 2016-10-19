@@ -9,14 +9,6 @@
             crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <title>JS6 lesson 1 Evgen Salyakin</title>
-    <script>
-        function writeBlock(index) {
-            document.write("<div class='block' id='block" + index + "'><p id='description" + index + "'>Description: </p>" +
-                    "<p id='example" + index + "'>Example:<br></p>" +
-                    "<p id='init" + index + "'>Initialization data: </p>" +
-                    "<p id='result" + index + "'>Result: </p></div>");
-        }
-    </script>
 </head>
 <body>
 <div class="container-fluid">
@@ -27,17 +19,52 @@
     </header>
 
     <div class="wrapper">
-        <script>
-            for (var i = 0; i < 5; i++) {
-                writeBlock(i);
-            }
-        </script>
+        <div class='block'>
+            <p>Description: The <b>push()</b> method can append one or more elements to the end of an array.
+                The <b>pop()</b> method pulls the last element off of the given array and returns it.
+                The <b>unshift()</b> method is like the push() method, only it works at the beginning of the array. The unshift() method can prepend one or more elements to the beginning of an array.
+                The <b>shift()</b> method is like the pop() method, only it works at the beginning of the array. The shift() method pulls the first element off of the given array and returns it.</p>
+            <p>Example:<br>item = arr.shift();<br>arr.push(item);</p>
+            <p id='init0'>Initialization data: </p>
+            <p id='result0'>Result: </p>
+        </div>
+        <div class='block'>
+            <p>Description: The <b>sort()</b> method sorts the items of an array.
+                The sort order can be either alphabetic or numeric, and either ascending (up) or descending (down).
+                By default, the sort() method sorts the values as strings in alphabetical and ascending order.</p>
+            <p>Example:<br>arr.sort(function(a, b) {<br>return a - b;<br>});</p>
+            <p id='init1'>Initialization data: </p>
+            <p id='result1'>Result: </p>
+        </div>
+        <div class='block'>
+            <p>Description: The <b>reverse()</b> method reverses the element of an array. The first array element becomes the last and the last becomes the first.</p>
+            <p>Example:<br>arr.reverse();</p>
+            <p id='init2'>Initialization data: </p>
+            <p id='result2'>Result: </p>
+        </div>
+        <div class='block'>
+            <p>Description: The <b>splice()</b> method adds/removes items to/from an array, and returns the removed item(s).</p>
+            <p>Example:<br>arr.splice(0, 2, 77, 78);</p>
+            <p id='init3'>Initialization data: </p>
+            <p id='result3'>Result: </p>
+        </div>
+        <div class='block'>
+            <p>Description: The <b>map()</b> method creates a new array with the results of calling a function for every array element." +
+                "The map() method calls the provided function once for each element in an array, in order." +
+                "Note: map() does not execute the function for array elements without values." +
+                "Note: map() does not change the original array.</p>
+            <p>Example:<br>var percents = arr.map(function (num, id, ar) {<br>
+                var sum = 0;<br>ar.forEach(function (n) {sum += n;});<br>return (num / sum).toFixed(3) + '%';<br>});</p>
+            <p id='init4'>Initialization data: </p>
+            <p id='result4'>Result: </p>
+        </div>
     </div>
+
+    <footer class="wrapper text-xs-center">
+        <a class="button" href="../index.html">Home page</a>
+        <p>Copyleft 2016 by Evgeniy Salyakin</p>
+    </footer>
 </div>
-<footer class="wrapper text-xs-center">
-    <a class="button" href="../index.html">Home page</a>
-    <p>Copyleft 2016 by Evgeniy Salyakin</p>
-</footer>
 <script src="arrayFunctions.js"></script>
 </body>
 </html>
