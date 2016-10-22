@@ -1,5 +1,7 @@
 var arr =['a', 'b', 'c', 4, 5, 6];
 
+var functionObject = {};
+
 arr.push = function () {
     for (var i=0, len = arguments.length, arrLenght = this.length; i<len; i++, arrLenght++) {
         this[arrLenght] = arguments[i];
@@ -8,10 +10,10 @@ arr.push = function () {
 };
 
 arr.pop = function () {
-    var arrLenght = this.length-1;
-    item = this[arrLenght];
-    delete this[arrLenght];
-    this.length = arrLenght;
+    var arrLength = this.length-1;
+    item = this[arrLength];
+    delete this[arrLength];
+    this.length = arrLength;
     return item;
 };
 
@@ -38,6 +40,16 @@ arr.join = function (separator = ',') {
     return str;
 };
 
+arr.reverse = function() {
+    var half = this.length/2>>0;
+    for (var i=0,n=this.length-1;i<half;i++,n--) {
+        item = this[i];
+        this[i] = this[n];
+        this[n] = item;
+    }
+    return this;
+};
+
 console.log('***  Push  ***');
 var len = arr.push('+',3);
 console.log(len);
@@ -57,3 +69,7 @@ console.log(newArr.toString());
 console.log('***  Join  ***');
 var str = arr.join('+ ');
 console.log(str.toString());
+
+console.log('***  Reverse  ***');
+arr.reverse();
+console.log(arr.toString());
