@@ -6,6 +6,11 @@ body {
     background-size: cover;
 }
 
+p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 header, footer {
     margin: 25px;
     color: rgb(255, 255, 255);
@@ -37,7 +42,7 @@ header, footer {
 
 .block-title {
     position: absolute;
-    top: -20px;
+    top: -15px;
     left: 0;
     padding: 3px 5px;
     border-radius: 5px;
