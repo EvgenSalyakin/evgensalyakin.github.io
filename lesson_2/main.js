@@ -37,9 +37,9 @@ var resultProto5 = arrProto.reverse();
 
 // 6. sum
 var x = 8;
-resSum1 = 5 .sum(6);
-resSum2 = x.sum('9','+');
-resSum3 = myFunctions.sum.apply(x,[6,2]);
+var resSum1 = 5 .sum(6);
+var resSum2 = x.sum('9','+');
+var resSum3 = myFunctions.sum.apply(x,[6,2]);
 
 //******************** Console output ************************************
 // 1. push
