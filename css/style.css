@@ -1,16 +1,46 @@
+body {
+    background: rgb(171, 171, 171) url("../img/bg.jpg") no-repeat fixed center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 header, footer {
-    margin: 25px auto;
-    color: rgb(122, 169, 158);
-    text-shadow: 1px 1px rgb(0, 0, 0);
+    margin: 25px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 3px rgb(0, 0, 0);
     font-weight: 900;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 25px;
+}
+
+.main-block {
+    margin: 25px;
+    text-shadow: 2px 2px 3px rgb(0, 0, 0);
+    font-weight: 900;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 25px;
 }
 
 .block {
-    margin: 15px;
+    margin: 25px;
     padding: 15px;
-    background: rgb(122, 169, 158);
+    background: rgb(17, 33, 56);
     border-radius: 7px;
-    border: 2px solid rgb(47, 64, 58);
+    border: 2px solid rgb(0, 0, 0);
     box-shadow: 3px 3px 7px rgb(0, 0, 0);
     text-align: justify;
+    position: relative;
+    color: rgb(255, 255, 255);
+}
+
+.block-title {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    padding: 3px 5px;
+    border-radius: 5px;
+    background: rgb(204, 204, 204);
+    color: rgb(0, 0, 0);
 }
