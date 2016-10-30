@@ -1,29 +1,48 @@
 
-//console.log('Factorial = ',factorial(20));
-//console.log('Factorial = ',factorialSimple(20));
+var df1 = performanceMeasurement(factorial,[20]);
+var df2 = performanceMeasurement(factorialSimple,[20]);
+var result1 = (df1<df2) ? factorial(20) : factorialSimple(20);
 
-//console.log(performanceMeasurement(factorial,[20]));
-//console.log(performanceMeasurement(factorialSimple,[20]));
+var di1 = performanceMeasurement(involution,[5,6]);
+var di2 = performanceMeasurement(involutionSimple,[5,6]);
+var result2 = (di1<di2) ? involution(5,6) : involutionSimple(5,6);
 
-//console.log('5^6 = ',involution(5,6));
-//console.log('5^6 = ',involutionSimple(5,6));
+var ds1 = performanceMeasurement(sumDigit,[374267833]);
+var ds2 = performanceMeasurement(sumDigitSimple,[374267833]);
+var result3 = (ds1<ds2) ? sumDigit(374267833) : sumDigitSimple(374267833);
 
-//console.log(performanceMeasurement(involution,[5,6]));
-//console.log(performanceMeasurement(involutionSimple,[5,6]));
+var da1 = performanceMeasurement(arithmeticProgression,[20]);
+var da2 = performanceMeasurement(arithmeticProgressionSimple,[20]);
+var da3 = performanceMeasurement(arithmeticProgressionFormula,[20]);
+var result4 = (da1<da2) ? arithmeticProgression(20) : (da2<da3) ? arithmeticProgressionSimple(20) : arithmeticProgressionFormula(20);
 
-//console.log('3742: 3+7+4+2 = ',sumDigit(3742));
-//console.log('3742: 3+7+4+2 = ',sumDigitSimple(3742));
+var dfib1 = performanceMeasurement(fibonacci,[10]);
+var dfib2 = performanceMeasurement(fibonacciSimple,[10]);
+var result5 = (dfib1<dfib2) ? fibonacci(10) : fibonacciSimple(10);
 
-//console.log(performanceMeasurement(sumDigit,[374267833]));
-//console.log(performanceMeasurement(sumDigitSimple,[374267833]));
+console.log('Factorial(20) = ',factorial(20));
+console.log('Factorial(20) = ',factorialSimple(20));
+console.log('5^6 = ',involution(5,6));
+console.log('5^6 = ',involutionSimple(5,6));
+console.log('3742: 3+7+4+2 = ',sumDigit(3742));
+console.log('3742: 3+7+4+2 = ',sumDigitSimple(3742));
+console.log('Arithmetic progression 25 : ',arithmeticProgression(25));
+console.log('Arithmetic progression 25 : ',arithmeticProgressionSimple(25));
+console.log('Arithmetic progression 25 : ',arithmeticProgressionFormula(25));
+console.log('Fibonacci(20) = ',fibonacci(20));
+console.log('Fibonacci(20) = ',fibonacciSimple(20));
 
-//console.log('Arithmetic Progression: ',arithmeticProgression(5));
-//console.log('Arithmetic Progression: ',arithmeticProgressionSimple(5));
-//console.log('Arithmetic Progression: ',arithmeticProgressionFormula(5));
+document.getElementById('result1').innerHTML = "factorial(20) = " + result1;
+document.getElementById('performance-measurement1').innerHTML += "recursion = " + df1 + "; cycle = " + df2 + ";";
+document.getElementById('result2').innerHTML = "5 ^ 6 = " + result2;
+document.getElementById('performance-measurement2').innerHTML += "recursion = " + di1 + "; cycle = " + di2 + ";";
+document.getElementById('result3').innerHTML = "Sum digits 374267833 = " + result3;
+document.getElementById('performance-measurement3').innerHTML += "recursion = " + ds1 + "; cycle = " + ds2 + ";";
+document.getElementById('result4').innerHTML = "Arithmetic progression 20 = " + result4;
+document.getElementById('performance-measurement4').innerHTML += "recursion = " + da1 + "; cycle = " + da2 + "; formula = " + da3 + ";";
+document.getElementById('result5').innerHTML = "Fibonacci(10) = " + result5;
+document.getElementById('performance-measurement5').innerHTML += "recursion = " + dfib1 + "; cycle = " + dfib2 + ";";
 
-console.log(performanceMeasurement(arithmeticProgression,[3783]));
-console.log(performanceMeasurement(arithmeticProgressionSimple,[3783]));
-console.log(performanceMeasurement(arithmeticProgressionFormula,[3783]));
 
 function factorial(n) {
     if (n==0) return 1;
@@ -75,6 +94,24 @@ function arithmeticProgressionSimple(number) {
 
 function arithmeticProgressionFormula(number) {
     return ((1+number)/2)*number;
+}
+
+function fibonacci(number) {
+    if (number==0) return 0;
+    if (number==1) return 1;
+    return fibonacci(number-1) + fibonacci(number-2);
+}
+
+function fibonacciSimple(number) {
+    if (number==0) return 0;
+    if (number==1) return 1;
+    var el1=1, el2=1;
+    for (var i = 3; i < number; i++) {
+        var tmp = el2;
+        el2 = el1;
+        el1 += tmp;
+    }
+    return el1+el2;
 }
 
 function performanceMeasurement(func,arr) {
