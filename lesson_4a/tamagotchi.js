@@ -50,6 +50,7 @@ function Tamagotchi(nameP,powerP) {
     };
 
     this.eat = function (value=1) {
+        if (value<=0) return this;
         if (!died) {
             if (hunger<MAXPOWER) hunger+=value;
             step();
@@ -59,6 +60,7 @@ function Tamagotchi(nameP,powerP) {
     };
 
     this.drink = function (value=1) {
+        if (value<=0) return this;
         if (!died) {
             if (thirst<MAXPOWER) thirst+=value;
             step();
@@ -68,6 +70,7 @@ function Tamagotchi(nameP,powerP) {
     };
 
     this.sleep = function (value=1) {
+        if (value<=0) return this;
         if (!died) {
             if (force<MAXPOWER) force+=value;
             hunger--;
@@ -79,6 +82,7 @@ function Tamagotchi(nameP,powerP) {
     };
 
     this.go = function (value=1) {
+        if (value<=0) return this;
         var i = value;
         if (!died) {
             while (value--) {
