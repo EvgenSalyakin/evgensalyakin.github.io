@@ -50,7 +50,6 @@ function longWord(word) {
     else return word.charAt(0)+(l-2)+word.charAt(l-1);
 }
 
-
 tasks.push({
     title: "Слишком длинные слова",
     solution: longWord,
