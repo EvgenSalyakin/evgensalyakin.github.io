@@ -1,4 +1,4 @@
-const MAXPOWER = 10;
+const MAXPOWER = 8;
 const MAXAGE = 30;
 const STEPINTERVAL = 2500;
-var names = ["Hamster","Tom","BoomBox","Jack","Bit","Byte","Storm","Animal","Lucky","Poter","Script","Frankenstein","Demon","Gold"];
+var names = ["Ham","Tom","Boom","Jack","Bit","Byte","Storm","Tuti","Lucky","Poom","Kiwi","Frank","Demon","Gold"];

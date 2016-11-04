@@ -45,11 +45,14 @@ document.getElementById('performance-measurement5').innerHTML += "recursion = " 
 
 
 function factorial(n) {
+    if (n<0) return NaN;
     if (n==0) return 1;
     return n * factorial(n-1);
 }
 
 function factorialSimple(n) {
+    if (n<0) return NaN;
+    if (n==0) return 1;
     var rez = 1;
     for (var i = 1; i <= n; ++i) rez *= i;
     return rez;
@@ -105,8 +108,8 @@ function fibonacci(number) {
 function fibonacciSimple(number) {
     if (number==0) return 0;
     if (number==1) return 1;
-    var el1=1, el2=1;
-    for (var i = 3; i < number; i++) {
+    var el1=1, el2=0;
+    for (var i = 2; i < number; i++) {
         var tmp = el2;
         el2 = el1;
         el1 += tmp;

@@ -1,10 +1,10 @@
-function Tamagotchi(name = "No name",powerP,callbackStep,callbackDie) {
+function Tamagotchi(name = "Name",powerP,callbackStep,callbackDie) {
 
     var died = false;
     var age = 0;
-    var happiness = 0;
     var riches = 0;
-    var intellect = powerP || MAXPOWER;
+    var happiness = 1;
+    var intellect = 1;
     var health = powerP || MAXPOWER;
     var hunger = powerP || MAXPOWER;
     var thirst = powerP || MAXPOWER;
@@ -18,12 +18,13 @@ function Tamagotchi(name = "No name",powerP,callbackStep,callbackDie) {
     function step() {
         if (!died) {
             //age++;
+            //if (hunger == 0 || thirst == 0 || force == 0) health--;
             if (hunger < 0) hunger = 0;
             if (thirst < 0) thirst = 0;
             if (force < 0) force = 0;
             if (intellect <0) intellect = 0;
-            if (hunger == 0 || thirst == 0 || force == 0 || intellect == 0) health--;
-            if (health < 0 || age>MAXAGE) die();
+            if (health < 0) health = 0;
+            //if (health < 0 || age>MAXAGE) die();
         }
     }
 
@@ -36,24 +37,40 @@ function Tamagotchi(name = "No name",powerP,callbackStep,callbackDie) {
     }
 
     this.stepLife = function () {
+        var param = this.getParams();
         if (!died) {
             //console.log('*** New step ***');
             age++;
             hunger--;
             thirst--;
+            if (hunger <= 0 || thirst <= 0 || force <= 0) health--;
             if (hunger < 0) hunger = 0;
             if (thirst < 0) thirst = 0;
             if (force < 0) force = 0;
             if (intellect <0) intellect = 0;
-            if (hunger == 0 || thirst == 0 || force == 0 || intellect == 0) health--;
-            if (health < 0 || age>MAXAGE) die();
+            if (health < 0) health = 0;
+            if (health <= 0 || age>MAXAGE) die();
         }
         //else console.log('--- New step ---');
-        callbackStep();
+        callbackStep(param);
     };
 
     this.getMethods = function () {
         return ['eat','drink','sleep','play','study','watchTV','work'];
+    };
+
+    this.getMethodsText = function () {
+        return ['eat','drink','sleep','play','study','TV','work'];
+    };
+
+    this.getMethodsActions = function () {
+        return ['hunger+=value;',
+                'thirst+=value;',
+                'force+=value;',
+                'happiness++;\nforce--;',
+                'intellect++;',
+                'happiness++;\nintellect--;',
+                'riches += intellect + happiness;\nforce--;'];
     };
 
     this.do = function (action,value) {
@@ -90,8 +107,6 @@ function Tamagotchi(name = "No name",powerP,callbackStep,callbackDie) {
         if (value<=0) return this;
         if (!died) {
             if (force<MAXPOWER) force+=value;
-            //hunger--;
-            //thirst--;
             step();
             log(' SLEEP('+value+'):');
         }
@@ -104,8 +119,6 @@ function Tamagotchi(name = "No name",powerP,callbackStep,callbackDie) {
         if (!died) {
             while (value--) {
                 //force--;
-                //hunger--;
-                //thirst--;
                 step();
             }
             log(' GO   ('+i+'):');
@@ -117,8 +130,6 @@ function Tamagotchi(name = "No name",powerP,callbackStep,callbackDie) {
         if (!died) {
             happiness++;
             force--;
-            //hunger--;
-            //thirst--;
             step();
             log(' PLAY    :');
         }
@@ -129,8 +140,6 @@ function Tamagotchi(name = "No name",powerP,callbackStep,callbackDie) {
         if (!died) {
             happiness++;
             intellect--;
-            //hunger--;
-            //thirst--;
             step();
             log(' WATCH TV:');
         }
@@ -140,8 +149,6 @@ function Tamagotchi(name = "No name",powerP,callbackStep,callbackDie) {
     this.study = function () {
         if (!died) {
             intellect++;
-            //hunger--;
-            //thirst--;
             step();
             log(' STUDY   :');
         }
@@ -152,8 +159,6 @@ function Tamagotchi(name = "No name",powerP,callbackStep,callbackDie) {
         if (!died) {
             riches += intellect + happiness;
             force--;
-            //hunger--;
-            //thirst--;
             step();
             log(' WORK    :');
         }
@@ -165,7 +170,15 @@ function Tamagotchi(name = "No name",powerP,callbackStep,callbackDie) {
             ('age: '+age+'; riches: '+riches+' happiness: '+happiness+' health: '+health+' (h: '+hunger+' t: '+thirst+' f: '+force+' i: '+intellect+')');
     };
 
+    this.getParams = function () {
+        return [age,riches,happiness,intellect,health,hunger,thirst,force];
+    };
+
     this.isDied = function () {
         return died;
-    }
+    };
+
+    this.getName = function () {
+        return name;
+    };
 }

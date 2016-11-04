@@ -49,3 +49,67 @@ header, footer {
     background: rgb(204, 204, 204);
     color: rgb(0, 0, 0);
 }
+
+.tam-wrapp {
+    display: block;
+    border-radius: 50%;
+    background: rgb(245, 244, 149);
+    border: 10px solid rgba(120, 13, 0, 0.9);
+    box-shadow: 2px 3px 7px 6px rgba(0, 0, 0, 0.8);
+    padding: 25px;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin: 10px auto;
+}
+
+.tam-wrapp img {
+    margin: 25% auto;
+    vertical-align: middle;
+    display: block;
+}
+
+.tam-wrapp .tam-title {
+    position: absolute;
+    top: 7px;
+    padding: 7px;
+    background: rgba(120, 13, 0, 0.9);
+    color: rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    border: 1px solid rgb(0, 0, 0);
+    left: 30%;
+    right: 30%;
+    text-align: center;
+}
+
+.tam-wrapp #action {
+    position: absolute;
+    bottom: 7px;
+    padding: 7px;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 50%;
+    border: 1px solid rgb(0, 0, 0);
+    left: 30%;
+    right: 30%;
+    text-align: center;
+}
+
+.list li {
+    list-style: none;
+    margin: 2px 0;
+    line-height: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    width: 90%;
+}
+
+.list span {
+    padding: 0 5px;
+    width: 33.33%;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.param-title {
+    font-size: 17px;
+    padding-left: 15%;
+}

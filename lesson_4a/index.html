@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css"
+          integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="const.js"></script>
@@ -15,7 +18,31 @@
 </header>
 <div class="wrapper">
     <div class='block'>
-        <img id="tam" src="http://smiles24.ru/data/smiles/smiles-angeli-153.gif" >
+        <div class="block-title">Tamagotchi</div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <div class="tam-wrapp">
+                    <div id="name" class="tam-title">Name</div>
+                    <img id="tam" src="#">
+                    <div id="action"></div>
+                </div>
+                <div id="action-description"></div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <h5 class="param-title">Parameters:</h5>
+                <ul class="list">
+                    <li><span>Age:</span><span id='age'></span><span id='dif-age'></span></li>
+                    <li><span>Riches:</span><span id='riches'></span><span id='dif-riches'></span></li>
+                    <li><span>Happiness:</span><span id='happiness'></span><span id='dif-happiness'></span></li>
+                    <li><span>Intellect:</span><span id='intellect'></span><span id='dif-intellect'></span></li>
+                    <li><span>Health:</span><span id='health'></span><span id='dif-health'></span></li>
+                    <li><span>Hunger:</span><span id='hunger'></span><span id='dif-hunger'></span></li>
+                    <li><span>Thirst:</span><span id='thirst'></span><span id='dif-thirst'></span></li>
+                    <li><span>Force:</span><span id='force'></span><span id='dif-force'></span></li>
+                    <li><span></span><span></span><span id='dif-action'></span></li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 <footer class="wrapper text-xs-center">
