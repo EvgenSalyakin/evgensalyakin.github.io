@@ -30,7 +30,7 @@ var chatTest = [
 
 
 function chat(s) {
-    //TODO
+    return (/h+.+e+.+l{2,}.+o+/.test(s)).toString();
 }
 
 
