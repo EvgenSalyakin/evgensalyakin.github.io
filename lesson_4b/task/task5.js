@@ -54,8 +54,16 @@ var luckyNumberTests = [
  */
 
 
+function lucky(number) {
+    return !(/[^47]/.test(number));
+}
+
 function luckyNumber(number) {
-    //TODO
+    if (number.length == 0) return false;
+    if (lucky(number)) {
+        if (lucky(number.length.toString())) return true;
+    }
+    return false;
 }
 
 

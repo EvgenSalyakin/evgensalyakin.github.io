@@ -48,10 +48,8 @@ function fibonacci(n) {
     var z=0;
     for (var i=0;i<=n;i++) {
         z = fib(i);
-        rez += z;
-        //console.log(rez);
+        rez += z;;
     }
-    //console.log(rez);
     return rez;
 }
 
