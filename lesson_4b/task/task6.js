@@ -32,9 +32,27 @@ var prettyYearTests = [
     }
 ];
 
-
+function diferent(n) {
+    var s = n.toString();
+    var tmp = '';
+    var char = '';
+    var find = false;
+    for (var i=0; i<s.length; i++ ) {
+        char = s[i];
+        for (var k=0; k<tmp.length; k++ ) {
+            if (char == tmp[k]) find = true;
+        }
+        if (!find) tmp += char;
+    }
+    return !find;
+}
 function prettyYear(y) {
-
+    var year = +y;
+    if (year<=1000 && year>=9000) return NaN;
+    for (var i=year+1; i<=9000;i++) {
+        if (diferent(i)) return i;
+    }
+    return NaN;
 }
 
 

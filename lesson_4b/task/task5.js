@@ -54,16 +54,11 @@ var luckyNumberTests = [
  */
 
 
-function lucky(number) {
-    return !(/[^47]/.test(number));
-}
-
 function luckyNumber(number) {
     if (number.length == 0) return false;
-    if (lucky(number)) {
-        if (lucky(number.length.toString())) return true;
-    }
-    return false;
+    number = number.replace(/[^47]/g,'');
+    if (!(/[^47]/.test(number.length.toString()))) return true;
+    else return false;
 }
 
 
