@@ -42,9 +42,22 @@ var capsLockTests = [
     }
 ];
 
+function correction(s) {
+    if (s == s.toUpperCase()) return s.toLowerCase();
+    var firstChar = s[0];
+    var str = s.substr(1);
+    if (firstChar == firstChar.toLowerCase() && str == str.toUpperCase()) return firstChar.toUpperCase()+str.toLowerCase();
+    return s;
+}
 
 function capsLock(str) {
-    //TODO
+    var r = /\S+/g;
+    var match;
+    var res ='';
+    while (match = r.exec(str)) res += correction(match[0])+' ';
+    res = res.trim();
+    console.log(res);
+    return res;
 }
 
 
