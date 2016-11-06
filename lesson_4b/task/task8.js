@@ -66,11 +66,31 @@ var registrationTests = [
     }
 ];
 
-
 function registration(names) {
-    //TODO
+    var base = [];
+    var answer = [];
+    for (var i=0;i<names.length;i++) {
+        var name = names[i];
+        var find = false;
+        for (var k=0;k<base.length;k++) {
+            if (name == base[k].name) {
+                find = true;
+                base[k].index++;
+                answer.push(name+base[k].index);
+                break;
+            }
+        }
+        if (!find) {
+            var record = {
+                name: name,
+                index: 0
+            };
+            base.push(record);
+            answer.push('OK');
+        }
+    }
+    return answer;
 }
-
 
 tasks.push({
     title: "Система регистрации",

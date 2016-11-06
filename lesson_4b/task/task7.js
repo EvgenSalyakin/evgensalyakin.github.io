@@ -37,12 +37,11 @@ var doubleColaTests = [
     {
         parameters: [1802],
         expectedResult: "Penny"
+    },
+    {
+        parameters: [12345],
+        expectedResult: "Leonard"
     }
-    // },
-    // {
-    //     parameters: [12345],
-    //     expectedResult: "Leonard"
-    // }
 ];
 
 

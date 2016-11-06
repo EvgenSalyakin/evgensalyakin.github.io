@@ -34,15 +34,12 @@ var prettyYearTests = [
 
 function diferent(n) {
     var s = n.toString();
-    var tmp = '';
-    var char = '';
     var find = false;
     for (var i=0; i<s.length; i++ ) {
-        char = s[i];
-        for (var k=0; k<tmp.length; k++ ) {
-            if (char == tmp[k]) find = true;
+        var char = s[i];
+        for (var k=i+1; k<s.length; k++ ) {
+            if (char == s[k]) find = true;
         }
-        if (!find) tmp += char;
     }
     return !find;
 }
