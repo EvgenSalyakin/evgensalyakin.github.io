@@ -56,7 +56,6 @@ function capsLock(str) {
     var res ='';
     while (match = r.exec(str)) res += correction(match[0])+' ';
     res = res.trim();
-    console.log(res);
     return res;
 }
 
