@@ -48,7 +48,7 @@ var doubleColaTests = [
 
 function doubleCola(n) {
     var stack = ["Sheldon", "Leonard", "Penny", "Rajesh", "Howard"];
-    for (i=1;i<=n;i++) {
+    for (var i=1;i<=n;i++) {
         var drink = stack.shift();
         stack.push(drink);
         stack.push(drink);
