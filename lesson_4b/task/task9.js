@@ -31,7 +31,11 @@ var dragonCountTests = [
 
 
 function dragonCount(k, l, m, n, d) {
-    //TODO
+    var die=0;
+    for (var i=1; i<=d; i++) {
+        if (i%k==0 || i%l==0 || i%m==0 || i%n==0) die++;
+    }
+    return die;
 }
 
 
