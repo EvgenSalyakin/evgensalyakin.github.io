@@ -37,10 +37,16 @@ var drazilTest = [
 /**
  * In the first case, F(1234) = 1! * 2! * 3! * 4! = F(33222)
  */
-    
+
 
 function drazil(boys, girls) {
-    //TODO
+    var arr = ["0", "0", "2", "3", "322", "5", "53", "7", "7222", "7332"];
+    var rez= '';
+    for(var i=0;i<boys.length;i++) {
+        if (boys[i]!='0' && boys[i]!='1') rez += arr[boys[i]];
+    }
+    rez = rez.split('').sort().reverse().join('');
+    return +rez;
 }
 
 
