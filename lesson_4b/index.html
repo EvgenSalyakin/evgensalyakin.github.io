@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Test Algorithm Kit</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css"
+          integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <title>JS6 lesson 4 - Test Algorithm Kit</title>
 
     <link rel="stylesheet" href="lib/mocha.css">
 
@@ -12,30 +16,41 @@
     <script defer src="testFactory.js"></script>
 </head>
 <body>
+<div class="container-fluid">
+    <header class="wrapper text-xs-center">
+        <h5>Lesson 3</h5>
+        <h3>Recursion</h3>
+        <a class="button" href="../index.html">Home page</a>
+    </header>
 
-<div id="mocha"></div>
+    <div id="mocha"></div>
 
-<script>
-    mocha.setup('bdd');
-    var assert = chai.assert;
-    var tasks = [];
-</script>
+    <script>
+        mocha.setup('bdd');
+        var assert = chai.assert;
+        var tasks = [];
+    </script>
 
-<script src="task/task0.js"></script>
-<script src="task/task1.js"></script>
-<script src="task/task2.js"></script>
-<script src="task/task3.js"></script>
-<script src="task/task4.js"></script>
-<script src="task/task5.js"></script>
-<script src="task/task6.js"></script>
-<script src="task/task7.js"></script>
-<script src="task/task8.js"></script>
-<script src="task/task9.js"></script>
-<script src="task/task10.js"></script>
-<script src="task/task11.js"></script>
-<script src="task/task12.js"></script>
-<script src="task/task13.js"></script>
-<script src="task/taskHard.js"></script>
+    <script src="task/task0.js"></script>
+    <script src="task/task1.js"></script>
+    <script src="task/task2.js"></script>
+    <script src="task/task3.js"></script>
+    <script src="task/task4.js"></script>
+    <script src="task/task5.js"></script>
+    <script src="task/task6.js"></script>
+    <script src="task/task7.js"></script>
+    <script src="task/task8.js"></script>
+    <script src="task/task9.js"></script>
+    <script src="task/task10.js"></script>
+    <script src="task/task11.js"></script>
+    <script src="task/task12.js"></script>
+    <script src="task/task13.js"></script>
+    <script src="task/taskHard.js"></script>
 
+    <footer class="wrapper text-xs-center">
+        <a class="button" href="../index.html">Home page</a>
+        <p>Copyleft 2016 by Evgeniy Salyakin</p>
+    </footer>
+</div>
 </body>
 </html>
