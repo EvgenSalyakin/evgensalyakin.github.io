@@ -32,6 +32,7 @@ function Tamagotchi(name = "Name",powerP,callbackStep,callbackDie) {
         if (!died) {
             died = true;
             console.log(name+' is died on '+age+' step! His happiness level was equal '+happiness+' and he have '+riches+' coins.');
+            health = 0;
             callbackDie();
         }
     }

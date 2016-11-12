@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css"
+          integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>JS6 lesson 5 Evgen Salyakin</title>
+</head>
+<body>
+<div class="container-fluid">
+    <header class="wrapper text-xs-center">
+        <h5>Lesson 5</h5>
+        <h3>DOM Elements</h3>
+        <a class="button" href="../index.html">Home page</a>
+    </header>
+
+    <div class="wrapper">
+        <div class='block'>
+            <div class="block-title">To Do List</div>
+            <div id="myDIV" class="header">
+                <input type="text" id="myInput" placeholder="Input text...">
+                <span onclick="newElement()" class="addBtn">Add</span>
+            </div>
+
+            <ul id="myUL">
+                <li>Hit the gym</li>
+                <li class="checked">Pay bills</li>
+                <li>Meet George</li>
+                <li>Buy eggs</li>
+                <li>Read a book</li>
+                <li>Organize office</li>
+            </ul>
+        </div>
+        <div class='block'>
+            <div class="block-title">Water volume</div>
+
+
+        </div>
+    </div>
+
+    <footer class="wrapper text-xs-center">
+        <a class="button" href="../index.html">Home page</a>
+        <p>Copyleft 2016 by Evgeniy Salyakin</p>
+    </footer>
+    <script src="main.js"></script>
+    <script src="water.js"></script>
+</div>
+</body>
+</html>
