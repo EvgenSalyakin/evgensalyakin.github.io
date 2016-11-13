@@ -93,6 +93,14 @@
     clear: both;
 }
 
+#myInput {
+    border: none;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+
 #myUL input {
     border: none;
     width: 75%;
