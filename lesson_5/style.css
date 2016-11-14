@@ -1,6 +1,7 @@
 #myUL {
-    background-color: rgb(56, 17, 44);
-    padding: 10px 40px 30px;
+    background-color: rgba(56, 17, 44, 0.8);
+    padding: 10px;
+    margin: 20px;
     color: rgb(56, 17, 44);
 }
 
@@ -22,11 +23,9 @@
     user-select: none;
 }
 
-
 #myUL li:nth-child(odd) {
     background: #f9f9f9;
 }
-
 
 #myUL li:hover {
     background: #ddd;
@@ -81,8 +80,9 @@
 }
 
 .header {
-    background-color: rgb(56, 17, 44);
-    padding: 30px 40px;
+    background-color: rgba(56, 17, 44, 0.8);
+    padding: 10px;
+    margin: 20px;
     color: white;
     text-align: center;
 }

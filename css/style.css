@@ -1,4 +1,8 @@
-body {
+.bg_main,
+.bg_l1,
+.bg_l2,
+.bg_l3,
+.bg_l4 {
     background: rgb(171, 171, 171) url("../img/bg.jpg") no-repeat fixed center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -6,9 +10,39 @@ body {
     background-size: cover;
 }
 
-p {
-    margin-top: 10px;
-    margin-bottom: 10px;
+.bg_l5,
+.bg_l6,
+.bg_l7 {
+    background: rgb(171, 171, 171) url("../img/bg_winter.jpg") no-repeat fixed center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.bg_l8,
+.bg_l9,
+.bg_l10 {
+    background: rgb(171, 171, 171) url("../img/bg_night.jpg") no-repeat fixed center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.bg_l5 header,
+.bg_l6 header,
+.bg_l7 header,
+.bg_l5 footer,
+.bg_l6 footer,
+.bg_l7 footer {
+    margin: 25px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 3px rgb(0, 0, 0);
+    font-weight: 900;
+    background: rgba(8, 7, 41, 0.7);
+    box-shadow: 3px 3px 7px rgb(0, 0, 0);
+    padding: 25px;
 }
 
 header, footer {
@@ -16,8 +50,9 @@ header, footer {
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 3px rgb(0, 0, 0);
     font-weight: 900;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.6);
     padding: 25px;
+    box-shadow: 3px 3px 7px rgb(0, 0, 0);
 }
 
 .main-block {
@@ -25,13 +60,14 @@ header, footer {
     text-shadow: 2px 2px 3px rgb(0, 0, 0);
     font-weight: 900;
     background: rgba(0, 0, 0, 0.7);
+    box-shadow: 3px 3px 7px rgb(0, 0, 0);
     padding: 25px;
 }
 
 .block {
-    margin: 25px;
+    margin: 45px 25px;
     padding: 15px;
-    background: rgb(17, 33, 56);
+    background: rgba(17, 33, 56, 0.8);
     border-radius: 7px;
     border: 2px solid rgb(0, 0, 0);
     box-shadow: 3px 3px 7px rgb(0, 0, 0);
@@ -48,6 +84,11 @@ header, footer {
     border-radius: 5px;
     background: rgb(204, 204, 204);
     color: rgb(0, 0, 0);
+}
+
+p {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .tam-wrapp {
