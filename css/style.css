@@ -13,7 +13,7 @@
 .bg_l5,
 .bg_l6,
 .bg_l7 {
-    background: rgb(171, 171, 171) url("../img/bg_winter.jpg") no-repeat fixed center center;
+    background: rgba(8, 7, 41, 0.7) url("../img/bg_winter.jpg") no-repeat fixed center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -23,7 +23,7 @@
 .bg_l8,
 .bg_l9,
 .bg_l10 {
-    background: rgb(171, 171, 171) url("../img/bg_night.jpg") no-repeat fixed center center;
+    background: rgba(8, 7, 41, 0.7) url("../img/bg_night.jpg") no-repeat fixed center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -53,6 +53,24 @@ header, footer {
     background: rgba(0, 0, 0, 0.6);
     padding: 25px;
     box-shadow: 3px 3px 7px rgb(0, 0, 0);
+}
+
+h1.page-title {
+    font-weight: 100;
+    font-style: italic;
+    font-size: 30px;
+}
+
+.page-title {
+    font-weight: 100;
+    font-style: italic;
+    font-size: 24px;
+}
+
+.page-title img {
+    height: 50px;
+    width: auto;
+    margin: 0 10px;
 }
 
 .main-block {
