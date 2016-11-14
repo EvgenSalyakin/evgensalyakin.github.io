@@ -36,23 +36,34 @@
 .bg_l5 footer,
 .bg_l6 footer,
 .bg_l7 footer {
-    margin: 25px;
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 3px rgb(0, 0, 0);
-    font-weight: 900;
     background: rgba(8, 7, 41, 0.7);
     box-shadow: 3px 3px 7px rgb(0, 0, 0);
-    padding: 25px;
 }
 
-header, footer {
-    margin: 25px;
+header {
+    margin: 0 25px 25px 25px;
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 3px rgb(0, 0, 0);
     font-weight: 900;
     background: rgba(0, 0, 0, 0.6);
-    padding: 25px;
+    padding: 45px;
     box-shadow: 3px 3px 7px rgb(0, 0, 0);
+    border-radius: 10px;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+footer {
+    margin: 25px 25px 0 25px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 3px rgb(0, 0, 0);
+    font-weight: 900;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 45px;
+    box-shadow: 3px 3px 7px rgb(0, 0, 0);
+    border-radius: 10px;
+    border: 2px solid rgb(0, 0, 0);
 }
 
 h1.page-title {
@@ -80,13 +91,15 @@ h1.page-title {
     background: rgba(0, 0, 0, 0.7);
     box-shadow: 3px 3px 7px rgb(0, 0, 0);
     padding: 25px;
+    border-radius: 10px;
+    border: 2px solid rgb(0, 0, 0);
 }
 
 .block {
     margin: 45px 25px;
     padding: 15px;
     background: rgba(17, 33, 56, 0.8);
-    border-radius: 7px;
+    border-radius: 10px;
     border: 2px solid rgb(0, 0, 0);
     box-shadow: 3px 3px 7px rgb(0, 0, 0);
     text-align: justify;
