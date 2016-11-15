@@ -16,24 +16,40 @@
         <h3>DOM Elements</h3>
         <a class="button" href="../index.html">· Home page ·</a>
         <br/>
-        <a href="https://github.com/EvgenSalyakin/evgensalyakin.github.io/tree/master/lesson_5">· My project on GitHub ·</a>
+        <a href="https://github.com/EvgenSalyakin/evgensalyakin.github.io/tree/master/lesson_5">· My project on GitHub
+            ·</a>
     </header>
 
     <div class="wrapper">
         <div class='block'>
             <div class="block-title">ToDo List</div>
-            <div id="myDIV" class="header">
-                <input type="text" id="myInput" placeholder="Input text...">
-                <span onclick="newElement()" class="addBtn">Add</span>
-            </div>
 
-            <ul id="myUL">
-                 <li class="checked">Pay bills</li>
-                <li>Meet Marina</li>
-                <li>Go to the bank</li>
-                <li>Read a book</li>
-                <li>Make homework</li>
+            <ul id="TabList" class="tab">
+                <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'List')">List</a></li>
+                <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'Archive')">Archive</a></li>
             </ul>
+
+            <div id="List" class="tabcontent">
+                <div id="myDIV" class="header">
+                    <input type="text" id="myInput" placeholder="Input text...">
+                    <span onclick="newElement()" class="addBtn">Add</span>
+                </div>
+
+                <ul id="myUL">
+                    <li class="checked">Pay bills</li>
+                    <li>Meet Marina</li>
+                    <li>Go to the bank</li>
+                    <li>Read a book</li>
+                    <li>Make homework</li>
+                </ul>
+                <div class="box-arch">
+                    <span onclick="archive()" class="archBtn">Remove to archive</span>
+                </div>
+            </div>
+            <div id="Archive" class="tabcontent">
+                <ul id="myULArc">
+                </ul>
+            </div>
         </div>
         <div class='block'>
             <div class="block-title">Water volume</div>
@@ -45,7 +61,8 @@
     <footer class="wrapper text-xs-center">
         <a class="button" href="../index.html">· Home page ·</a>
         <br/>
-        <a href="https://github.com/EvgenSalyakin/evgensalyakin.github.io/tree/master/lesson_5">· My project on GitHub ·</a>
+        <a href="https://github.com/EvgenSalyakin/evgensalyakin.github.io/tree/master/lesson_5">· My project on GitHub
+            ·</a>
         <p>Copyleft 2016 by Evgeniy Salyakin</p>
     </footer>
     <script src="main.js"></script>

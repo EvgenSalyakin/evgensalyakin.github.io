@@ -123,7 +123,29 @@
     transition: 0.3s;
 }
 
-.addBtn:hover {
+.archBtn {
+    display: inline-block;
+    padding: 10px;
+    width: 100%;
+    background: #624a75;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.addBtn:hover,
+.archBtn:hover {
     background-color: #3d324c;
+}
+
+.box-arch {
+    background-color: rgba(56, 17, 44, 0.8);
+    padding: 10px;
+    margin: 10px 20px;
+    color: white;
+    float: right;
+    width: 200px;
 }
 

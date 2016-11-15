@@ -1,6 +1,7 @@
-var myNodelist = document.getElementsByTagName("LI");
+var myNodelist = document.getElementById("myUL").getElementsByTagName("LI");
 
 for (var i = 0; i < myNodelist.length; i++) {
+
     var spanEdt = document.createElement("SPAN");
     var edt = document.createTextNode("\u270E");
     spanEdt.className = "edit";
@@ -14,6 +15,8 @@ for (var i = 0; i < myNodelist.length; i++) {
     myNodelist[i].appendChild(span);
 }
 
+document.getElementById("TabList").firstElementChild.firstElementChild.click();
+
 var close = document.getElementsByClassName("close");
 for (i = 0; i < close.length; i++) {
     close[i].onclick = delEl;
@@ -24,12 +27,24 @@ for (i = 0; i < edit.length; i++) {
     edit[i].onclick = edtEl;
 }
 
-var list = document.querySelector('ul');
+var list = document.querySelector('#myUL');
 list.addEventListener('click', function (ev) {
     if (ev.target.tagName === 'LI') {
         ev.target.classList.toggle('checked');
     }
 }, false);
+
+function archive() {
+    var checked = document.getElementsByClassName('checked');
+    var arcList = document.getElementById("myUL");
+    for (var i=checked.length-1;i>=0; i--) {
+        var item = arcList.removeChild(checked[i]);
+        var li = document.createElement("li");
+        var t = document.createTextNode(item.firstChild.nodeValue);
+        li.appendChild(t);
+        document.getElementById("myULArc").appendChild(li);
+    }
+}
 
 function newElement() {
     var li = document.createElement("li");
@@ -89,4 +104,22 @@ function edtEl() {
         };
         div.insertBefore(input, div.firstChild);
     }
+}
+
+function openTab(evt, tabName) {
+
+    var i, tabcontent, tablinks;
+
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
 }

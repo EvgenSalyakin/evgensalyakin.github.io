@@ -9,9 +9,12 @@ Array.prototype.min = function () {
 };
 
 var water = waterValume(height);
-console.log('Water valume:' + water);
+console.log('Water valume (1):' + water);
 document.getElementById('arr').innerHTML += height.toString();
 document.getElementById('result').innerHTML += water;
+
+var water = waterValume(height);
+console.log('Water valume (2):' + water);
 
 function waterValume(height) {
     var max = height.max();
@@ -34,4 +37,9 @@ function waterValume(height) {
         }
     }
     return water;
+}
+
+function waterValue2(height) {
+    var max = height.max();
+
 }
