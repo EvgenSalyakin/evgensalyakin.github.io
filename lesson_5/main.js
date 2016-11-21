@@ -46,6 +46,25 @@ function archive() {
     }
 }
 
+function sort() {
+    var list = document.getElementById("myUL");
+    var elements = document.getElementById("myUL").getElementsByTagName("LI");
+    var n = elements.length;
+
+    for (var i = 0; i < n; i++) {
+        {
+            var min = i;
+            for (var j = i + 1; j < n; j++) {
+                if (elements[j].innerText < elements[min].innerText) min = j;
+            }
+            var element = elements[min];
+            var first = elements[i];
+            list.insertBefore(element, first);
+        }
+
+    }
+}
+
 function newElement() {
     var li = document.createElement("li");
     var inputValue = document.getElementById("myInput").value;

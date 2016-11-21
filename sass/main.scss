@@ -1,0 +1,205 @@
+/*Lesson 6 */
+
+#lab .container-fluid {
+  max-width: 700px;
+  font-family: Helvetica, arial, serif;
+}
+
+.img-lab img {
+  width: 50%;
+  height: auto;
+}
+
+.lab-menu::after,
+.lab-welcome::after,
+.lab-text-col::after,
+.row-col::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.lab-header {
+  background: rgb(146, 193, 4);
+  background: -webkit-linear-gradient(rgb(70, 93, 2), rgb(146, 193, 4));
+  background: -o-linear-gradient(rgb(70, 93, 2), rgb(146, 193, 4));
+  background: -moz-linear-gradient(rgb(70, 93, 2), rgb(146, 193, 4));
+  background: linear-gradient(rgb(70, 93, 2), rgb(146, 193, 4));
+}
+
+#lab {
+  h1, h2 {
+    font-size: 36px;
+    text-align: left;
+    font-weight: 100;
+    margin: 0;
+    padding: 30px;
+    color: rgb(0, 0, 0);
+  }
+
+  h2 span {
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+  }
+
+  h3 {
+    font-size: 20px;
+    line-height: 14px;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    text-align: left;
+    padding: 0 0 0 15px;
+    margin: 0;
+  }
+
+  p:first-line {
+    color: rgb(90, 197, 50);
+  }
+
+  p + p:first-line {
+    color: rgb(0, 0, 0);
+  }
+
+  p {
+    margin: 10px 10px 0 15px;
+    font-size: 11px;
+    letter-spacing: 0.9px;
+  }
+
+  p, a {
+    color: rgb(0, 0, 0);
+  }
+
+  .lab-title a,
+  .lab-title a span {
+    color: rgb(255, 255, 255);
+  }
+
+  a:hover,
+  a:focus {
+    color: rgb(90, 197, 50);
+  }
+}
+
+.lab-menu li {
+  list-style: none;
+  background: url(../img/list.png) no-repeat center right 0px;
+}
+
+.lab-menu li a {
+  font-size: 19px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.lab-menu li:last-child {
+  background: none;
+}
+
+.lab-title a:hover,
+.lab-title a:focus {
+  color: rgb(27, 255, 6);
+  text-shadow: 2px 2px 3px rgb(0, 0, 0);
+}
+
+.lab-menu {
+  width: 100%;
+  text-align: center;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
+
+  li {
+    float: left;
+    width: 20%;
+    display: inline-block;
+    margin: 0;
+    padding: 15px 0;
+    text-align: center;
+  }
+}
+
+.lab-menu li a:hover,
+.lab-menu li a:focus {
+  color: rgb(90, 197, 50);
+}
+
+.lab-welcome {
+  background: rgb(238, 240, 252);
+}
+
+#lab .lab-welcome .col {
+  float: left;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+#lab .row-col .col {
+  padding: 0;
+}
+
+#lab .row-col:first-child {
+  margin-bottom: 10px;
+}
+
+#lab .lab-welcome .col h2 {
+  margin: 15px 0 0 -15%;
+  padding: 0;
+  font-size: 32px;
+}
+
+.lab-text-col .col:first-child,
+.row-col .col:first-child {
+  float: left;
+  width: 40%;
+  margin: 0;
+  padding: 15px;
+  text-align: left;
+  position: relative;
+}
+
+.border-r {
+  border-right: 2px solid rgb(238, 240, 252);
+}
+
+.lab-text-col .col:last-child,
+.row-col .col:last-child {
+  float: left;
+  width: 60%;
+  margin: 0;
+  padding: 15px;
+  text-align: left;
+}
+
+.border-b {
+  border-bottom: 2px solid rgb(238, 240, 252);
+}
+
+hr {
+  clear: both;
+  float: none;
+  width: 100%;
+  height: 10px;
+  margin: 0.7em auto;
+  border: none;
+  background: rgb(238, 240, 252);
+}
+
+.lab-footer {
+  padding: 30px;
+  font-size: 11px;
+  line-height: 20px;
+  letter-spacing: 0.9px;
+}
+
+@media (max-width: 798px) {
+  .lab-menu li,
+  #lab .lab-welcome .col,
+  #lab .col {
+    width: 100%;
+  }
+}
