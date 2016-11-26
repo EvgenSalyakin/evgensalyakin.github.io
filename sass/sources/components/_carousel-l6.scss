@@ -1,0 +1,29 @@
+.carousel {
+  background: rgb(238, 240, 252);
+
+  .col {
+    float: left;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+
+    h2 {
+      margin: 15px 0 0 -15%;
+      padding: 0;
+      font-size: 32px;
+    }
+  }
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@media (max-width: 798px) {
+  .carousel .col {
+    width: 100%;
+  }
+}

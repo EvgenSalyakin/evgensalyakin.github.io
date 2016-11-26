@@ -1,3 +1,11 @@
+/*@import "sources/common/bootstrap";*/
+@import "sources/layouts/header-l6";
+@import "sources/components/top-menu-l6";
+@import "sources/components/carousel-l6";
+
+@import "sources/layouts/footer-l6";
+
+
 
 
 /*Lesson 6 */
@@ -12,21 +20,12 @@
   height: auto;
 }
 
-.lab-menu::after,
 .lab-welcome::after,
 .lab-text-col::after,
 .row-col::after {
   content: "";
   display: table;
   clear: both;
-}
-
-header {
-  background: rgb(146, 193, 4);
-  background: -webkit-linear-gradient(rgb(70, 93, 2), rgb(146, 193, 4));
-  background: -o-linear-gradient(rgb(70, 93, 2), rgb(146, 193, 4));
-  background: -moz-linear-gradient(rgb(70, 93, 2), rgb(146, 193, 4));
-  background: linear-gradient(rgb(70, 93, 2), rgb(146, 193, 4));
 }
 
 #lab {
@@ -83,50 +82,13 @@ header {
   }
 }
 
-.lab-menu li {
-  list-style: none;
-  background: url(../img/list.png) no-repeat center right 0px;
-}
-
-.lab-menu li a {
-  font-size: 19px;
-  color: rgb(0, 0, 0);
-  text-align: center;
-}
-
-.lab-menu li:last-child {
-  background: none;
-}
-
 .lab-title a:hover,
 .lab-title a:focus {
   color: rgb(27, 255, 6);
   text-shadow: 2px 2px 3px rgb(0, 0, 0);
 }
 
-.lab-menu {
-  width: 100%;
-  text-align: center;
-  -webkit-margin-before: 0;
-  -webkit-margin-after: 0;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -webkit-padding-start: 0;
 
-  li {
-    float: left;
-    width: 20%;
-    display: inline-block;
-    margin: 0;
-    padding: 15px 0;
-    text-align: center;
-  }
-}
-
-.lab-menu li a:hover,
-.lab-menu li a:focus {
-  color: rgb(90, 197, 50);
-}
 
 .lab-welcome {
   background: rgb(238, 240, 252);
@@ -191,15 +153,9 @@ hr {
   background: rgb(238, 240, 252);
 }
 
-.lab-footer {
-  padding: 30px;
-  font-size: 11px;
-  line-height: 20px;
-  letter-spacing: 0.9px;
-}
+
 
 @media (max-width: 798px) {
-  .lab-menu li,
   #lab .lab-welcome .col,
   #lab .col {
     width: 100%;

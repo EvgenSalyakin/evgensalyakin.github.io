@@ -1,0 +1,28 @@
+.lab-menu {
+  width: 100%;
+  text-align: center;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
+  padding: 15px 0;
+
+  a {
+    font-size: 19px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 0 2%;
+
+    &:hover,
+    &:focus {
+      color: rgb(90, 197, 50);
+    }
+  }
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

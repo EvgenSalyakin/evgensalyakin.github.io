@@ -2067,7 +2067,7 @@ exports.window = {
 
 /**
  * Expose some basic cursor interactions
- * that are common among reporters.
+ * that are bootstrap among reporters.
  */
 
 exports.cursor = {
@@ -2222,7 +2222,7 @@ function Base(runner) {
 }
 
 /**
- * Output common epilogue used by many of
+ * Output bootstrap epilogue used by many of
  * the bundled reporters.
  *
  * @api public
