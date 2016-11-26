@@ -1253,13 +1253,6 @@ h1:focus {
 @media (max-width: 798px) {
   .carousel .col {
     width: 100%; } }
-footer {
-  padding: 30px;
-  font-size: 11px;
-  line-height: 20px;
-  letter-spacing: 0.9px; }
-
-/*Lesson 6 */
 #lab .container-fluid {
   max-width: 700px;
   font-family: Helvetica, arial, serif; }
@@ -1302,5 +1295,10 @@ footer {
 @media (max-width: 798px) {
   #lab .col {
     width: 100%; } }
+footer {
+  padding: 30px;
+  font-size: 11px;
+  line-height: 20px;
+  letter-spacing: 0.9px; }
 
 /*# sourceMappingURL=lesson6.css.map */
