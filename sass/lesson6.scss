@@ -1,4 +1,4 @@
-/*@import "sources/common/bootstrap";*/
+@import "sources/common/bootstrap";
 @import "sources/layouts/header-l6";
 @import "sources/components/top-menu-l6";
 @import "sources/components/carousel-l6";
@@ -20,7 +20,6 @@
   height: auto;
 }
 
-.lab-welcome::after,
 .lab-text-col::after,
 .row-col::after {
   content: "";
@@ -88,32 +87,12 @@
   text-shadow: 2px 2px 3px rgb(0, 0, 0);
 }
 
-
-
-.lab-welcome {
-  background: rgb(238, 240, 252);
-}
-
-#lab .lab-welcome .col {
-  float: left;
-  width: 50%;
-  margin: 0;
-  padding: 0;
-  text-align: left;
-}
-
 #lab .row-col .col {
   padding: 0;
 }
 
 #lab .row-col:first-child {
   margin-bottom: 10px;
-}
-
-#lab .lab-welcome .col h2 {
-  margin: 15px 0 0 -15%;
-  padding: 0;
-  font-size: 32px;
 }
 
 .lab-text-col .col:first-child,
@@ -153,10 +132,7 @@ hr {
   background: rgb(238, 240, 252);
 }
 
-
-
 @media (max-width: 798px) {
-  #lab .lab-welcome .col,
   #lab .col {
     width: 100%;
   }

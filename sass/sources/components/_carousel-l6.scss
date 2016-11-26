@@ -1,5 +1,11 @@
-.carousel {
+#lab .carousel {
   background: rgb(238, 240, 252);
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
   .col {
     float: left;
@@ -13,12 +19,6 @@
       padding: 0;
       font-size: 32px;
     }
-  }
-
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
   }
 }
 
