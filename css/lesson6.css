@@ -1150,7 +1150,69 @@ header {
   background: -moz-linear-gradient(#465d02, #92c104);
   background: linear-gradient(#465d02, #92c104); }
 
-.lab-menu {
+h1, h2 {
+  font-size: 36px;
+  text-align: left;
+  font-weight: 100;
+  margin: 0;
+  padding: 30px;
+  color: black; }
+
+h1 span,
+h2 span {
+  font-weight: 700;
+  color: black; }
+
+h3 {
+  font-size: 20px;
+  line-height: 14px;
+  font-weight: 400;
+  color: black;
+  text-align: left;
+  padding: 0 0 0 15px;
+  margin: 0; }
+
+hr {
+  clear: both;
+  float: none;
+  width: 100%;
+  height: 10px;
+  margin: 0.7em auto;
+  border: none;
+  background: #eef0fc; }
+
+p:first-line {
+  color: #5ac532; }
+
+p + p:first-line {
+  color: black; }
+
+p {
+  margin: 10px 10px 0 15px;
+  font-size: 11px;
+  letter-spacing: 0.9px; }
+
+p, a {
+  color: black; }
+
+a:hover,
+a:focus {
+  color: #5ac532; }
+
+h1 a,
+h1 a span {
+  color: white; }
+
+h1 a:hover,
+h1 a:focus {
+  text-shadow: 2px 2px 3px black;
+  text-decoration: none; }
+
+h1:hover,
+h1:focus {
+  color: #1bff06; }
+
+.menu {
   width: 100%;
   text-align: center;
   -webkit-margin-before: 0;
@@ -1159,14 +1221,14 @@ header {
   -webkit-margin-end: 0;
   -webkit-padding-start: 0;
   padding: 15px 0; }
-  .lab-menu a {
+  .menu a {
     font-size: 19px;
     color: black;
     text-align: center;
     padding: 0 2%; }
-    .lab-menu a:hover, .lab-menu a:focus {
+    .menu a:hover, .menu a:focus {
       color: #5ac532; }
-  .lab-menu:after {
+  .menu:after {
     content: "";
     display: table;
     clear: both; }
@@ -1202,55 +1264,11 @@ footer {
   max-width: 700px;
   font-family: Helvetica, arial, serif; }
 
-.img-lab img {
-  width: 50%;
-  height: auto; }
-
 .lab-text-col::after,
 .row-col::after {
   content: "";
   display: table;
   clear: both; }
-
-#lab h1, #lab h2 {
-  font-size: 36px;
-  text-align: left;
-  font-weight: 100;
-  margin: 0;
-  padding: 30px;
-  color: black; }
-#lab h2 span {
-  font-weight: 700;
-  color: black; }
-#lab h3 {
-  font-size: 20px;
-  line-height: 14px;
-  font-weight: 400;
-  color: black;
-  text-align: left;
-  padding: 0 0 0 15px;
-  margin: 0; }
-#lab p:first-line {
-  color: #5ac532; }
-#lab p + p:first-line {
-  color: black; }
-#lab p {
-  margin: 10px 10px 0 15px;
-  font-size: 11px;
-  letter-spacing: 0.9px; }
-#lab p, #lab a {
-  color: black; }
-#lab .lab-title a,
-#lab .lab-title a span {
-  color: white; }
-#lab a:hover,
-#lab a:focus {
-  color: #5ac532; }
-
-.lab-title a:hover,
-.lab-title a:focus {
-  color: #1bff06;
-  text-shadow: 2px 2px 3px black; }
 
 #lab .row-col .col {
   padding: 0; }
@@ -1280,15 +1298,6 @@ footer {
 
 .border-b {
   border-bottom: 2px solid #eef0fc; }
-
-hr {
-  clear: both;
-  float: none;
-  width: 100%;
-  height: 10px;
-  margin: 0.7em auto;
-  border: none;
-  background: #eef0fc; }
 
 @media (max-width: 798px) {
   #lab .col {
