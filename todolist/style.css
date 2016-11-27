@@ -1,5 +1,7 @@
 .todolist .todolist__list,
-.todolist .todolist__menu {
+.todolist .todolist__menu,
+.todolist .todolist__listArc,
+.todolist.open .todolist__selected{
     display: none;
     margin: 0;
     cursor: pointer;
@@ -21,7 +23,8 @@
 }
 
 .todolist.open .todolist__list,
-.todolist.open .todolist__menu {
+.todolist.open .todolist__menu,
+.todolist .todolist__selected {
     display: block;
 }
 

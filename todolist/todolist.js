@@ -1,5 +1,5 @@
 function ToDoList(options) {
-    var elem, list, selected, edited, saveValue;
+    var elem, list, selected, edited, saveValue, listArc, selectedElem;
 
     function getElem() {
         if (!elem) render();
@@ -15,9 +15,13 @@ function ToDoList(options) {
         titleElem.className = "todolist__title";
         titleElem.textContent = options.title;
 
-        elem.onmousedown = function () {
-            //return false;
-        };
+        selectedElem = document.createElement('span');
+        elem.appendChild(selectedElem);
+        selectedElem.className = "todolist__selected";
+        selectedElem.textContent = 'No selected item';
+        //elem.onmousedown = function () {
+        //  return false;
+        //};
 
         elem.onclick = function (event) {
             if (event.target.closest('.todolist__title')) {
@@ -64,7 +68,10 @@ function ToDoList(options) {
             li.textContent = item;
             list.appendChild(li);
         });
+        listArc = document.createElement('ul');
+        listArc.className = 'todolist__listArc';
         elem.appendChild(list);
+        elem.appendChild(listArc);
     }
 
     function renderMenu() {
@@ -240,13 +247,9 @@ function ToDoList(options) {
 
     function archiveList() {
         let checked = list.getElementsByClassName('checked');
-        //var arcList = document.getElementById("myUL");
         for (let i=checked.length-1;i>=0; i--) {
             let item = list.removeChild(checked[i]);
-            //let li = document.createElement("li");
-            //var t = document.createTextNode(item.firstChild.nodeValue);
-            //li.appendChild(t);
-            //document.getElementById("myULArc").appendChild(li);
+            listArc.appendChild(item);
         }
     }
 
@@ -262,6 +265,8 @@ function ToDoList(options) {
 
     function close() {
         elem.classList.remove('open');
+        if (!selected) selectedElem.textContent = 'No selected item';
+        else selectedElem.textContent = selected.textContent;
     }
 
     function toggle() {
