@@ -1,5 +1,5 @@
 
-var menu = new ToDoList({
+var toDoList = new ToDoList({
     title: "ToDo List",
     items: [
          "Pay bills",
@@ -10,6 +10,6 @@ var menu = new ToDoList({
     ]
 });
 
-var elem = menu.getElem();
+var elem = toDoList.getElem();
 
 document.getElementById('todolist').appendChild(elem);
