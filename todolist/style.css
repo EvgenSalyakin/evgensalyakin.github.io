@@ -1,7 +1,11 @@
+.todolist {
+    font-size: 15px;
+}
+
 .todolist .todolist__list,
 .todolist .todolist__menu,
 .todolist .todolist__listArc,
-.todolist.open .todolist__selected{
+.todolist.open .todolist__selected {
     display: none;
     margin: 0;
     cursor: pointer;
@@ -38,4 +42,9 @@
 
 .todolist .checked {
     text-decoration: line-through;
+}
+
+.todolist .todolist__selected {
+    font-size: 12px;
+    text-align: right;
 }
