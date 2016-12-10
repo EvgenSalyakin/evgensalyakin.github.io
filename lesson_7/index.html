@@ -5,10 +5,11 @@
           integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">-->
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/style.css">
-    <!--<link rel="stylesheet" href="style.css">-->
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <title>JS6 lesson 7 Evgen Salyakin</title>
     <link rel="shortcut icon" href="../img/icon.png" type="image/x-icon">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
 </head>
 <body>
 <div class="container-fluid bg_l5">
@@ -22,7 +23,42 @@
     </header>
 
     <div class="wrapper">
-        <div class='block' id="todolist">
+        <div id="container">
+
+            <div id="header"> To Do List </div>
+
+            <div class="task-list task-container" id="pending">
+                <h3>Pending</h3>
+                <!--<div class="todo-task">
+                    <div class="task-header">Sample Header</div>
+                    <div class="task-date">25/06/1992</div>
+                    <div class="task-description">Lorem Ipsum Dolor Sit Amet</div>
+                </div>-->
+            </div>
+
+            <div class="task-list task-container" id="inProgress">
+                <h3>In Progress</h3>
+            </div>
+
+            <div class="task-list task-container" id="completed">
+                <h3>Completed</h3>
+            </div>
+
+            <div class="task-list">
+                <h3>Add a task</h3>
+                <form id="todo-form">
+                    <input type="text" placeholder="Title" />
+                    <textarea placeholder="Description"></textarea>
+                    <input type="text" id="datepicker" placeholder="Due Date (dd/mm/yyyy)" />
+                    <input type="button" class="btn btn-primary" value="Add Task" onclick="todo.add();" />
+                </form>
+
+                <input type="button" class="btn btn-primary" value="Clear Data" onclick="todo.clear();" />
+
+                <div id="delete-div">
+                    Drag Here to Delete
+                </div>
+            </div>
         </div>
     </div>
 
@@ -32,9 +68,8 @@
         <a href="https://github.com/EvgenSalyakin/evgensalyakin.github.io/tree/master/lesson_7">· My project on GitHub ·</a>
         <p>Copyleft (&#8580;) 2016 by Evgeniy Salyakin</p>
     </footer>
-    <script src="todolistJQ.js"></script>
-    <script src="main.js"></script>
-
+    <!--<script src="dist/todolistJQ.js"></script>-->
+    <script src="dist/bundle.js"></script>
 
 </div>
 
