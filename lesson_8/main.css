@@ -1,0 +1,55 @@
+.bg_l8 header,
+.bg_l8 footer {
+    text-align: center;
+}
+
+.bg_l8 div {
+    margin:  auto 0;
+    display: block;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.bg_l8 div.bg {
+    background: rgba(8, 7, 41, 0.7);
+    box-shadow: 3px 3px 7px rgb(0, 0, 0);
+    margin: 0 25px 25px 25px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 3px rgb(0, 0, 0);
+    font-weight: 900;
+    padding: 45px;
+    border-radius: 10px;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.bg_l8 span {
+    border-radius: 2px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background: #444;
+    display: inline-block;
+    margin: 2px;
+    padding: 0;
+    color: #fff;
+    font-size: 40px;
+}
+.bg_l8 span.hide {
+    background: transparent;
+    color: transparent;
+    text-shadow: none;
+}
+
+.bg_l8 span.start{
+    margin-top: 100px;
+    width: 100px;
+}
+.bg_l8 span.victory{
+    margin-top: 100px;
+    width: 150px;
+    background: #fff;
+    color: #444;
+}
+

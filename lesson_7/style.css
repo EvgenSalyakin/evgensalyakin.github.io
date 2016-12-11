@@ -8,12 +8,20 @@ body {
     border: 0 !important;
 }
 
-#container{
-    margin: 0 auto;
-    width: 1060px;
+#container {
+    overflow: hidden;
+    max-width: 1060px;
     min-height: 100%;
-    background-color: transparent;
-    border: 0;
+    background: rgba(8, 7, 41, 0.7);
+    margin: 0 25px 25px 25px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 3px rgb(0, 0, 0);
+    font-weight: 900;
+    padding: 5px;
+    box-shadow: 3px 3px 7px rgb(0, 0, 0);
+    border-radius: 10px;
+    border: 2px solid rgb(0, 0, 0);
+    clear: both;
 }
 
 #header{
@@ -24,17 +32,18 @@ body {
 }
 
 .task-list{
-    width: 250px;
-    float: left;
-    margin: 0 5px;
+    width: 24%;
+    min-width: 150px;
+    display: inline-block;
+    margin: 0 auto;
     background-color: #e3e3e3;
-    min-height: 240px;
+    min-height: 270px;
     border-radius: 10px;
     padding-bottom: 15px;
 }
 
 .task-list input, .task-list textarea{
-    width: 240px;
+    width: 90%;
     margin: 1px 5px;
 }
 
@@ -45,7 +54,7 @@ body {
 .todo-task{
     border-radius: 5px;
     background-color: #fff;
-    width: 230px;
+    width: 90%;
     margin: 5px;
     padding: 5px;
 }
@@ -53,7 +62,6 @@ body {
 .task-list input[type="button"]{
     width: 100px;
     margin: 5px;
-
 }
 
 .todo-task > .task-header{
@@ -74,7 +82,7 @@ h3{
 }
 
 #delete-div{
-    display: none;
+    /*display: none;*/
     background-color: #fff;
     border: 3px dotted #000;
     margin: 10px;
