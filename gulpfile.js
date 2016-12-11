@@ -9,9 +9,9 @@ const webpack = require('webpack-stream');
 const webpackConfig = require('./webpack.config');
 
 const pathsJS = {
-    allSrcJs: 'lesson_7/src/**/*.js',
-    distDir: 'lesson_7/dist',
-    clientEntryPoint: 'lesson_7/src/index.js',
+    allSrcJs: 'todolist_jq/src/**/*.js',
+    distDir: 'todolist_jq/dist',
+    clientEntryPoint: 'todolist_jq/src/index.js',
 
 };
 

@@ -1,5 +1,5 @@
 module.exports = {
-    entry: "./lesson_7/src/index.js",
+    entry: "./todolist_jq/src/index.js",
     devtool: "source-map",
     output: {
         //path: __dirname,
