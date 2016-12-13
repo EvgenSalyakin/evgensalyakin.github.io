@@ -1,78 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css"
-          integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="lib/jquery-ui/jquery-ui.css">
-    <meta charset="UTF-8">
-    <title>JS6 lesson 7 Evgen Salyakin</title>
-    <link rel="shortcut icon" href="../img/icon.png" type="image/x-icon">
-    <script src="../node_modules/jquery/dist/jquery.js"></script>
-</head>
-<body>
-<div class="container-fluid bg_l7">
-    <header class="wrapper text-xs-center">
-        <h2 class="page-title"><img src="../img/icon.png" alt="page title"/>Lesson 7</h2>
-        <h3>jQuery & localStorage</h3>
-        <a href="../index.html">· Home page ·</a>
-        <br/>
-        <a href="https://github.com/EvgenSalyakin/evgensalyakin.github.io/tree/master/lesson_7">· My project on GitHub
-            ·</a>
-    </header>
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css"-->
+          <!--integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">-->
+    <!--<link rel="stylesheet" href="../css/main.css">-->
+    <!--<link rel="stylesheet" href="../css/style.css">-->
+    <!--<link rel="stylesheet" href="style.css">-->
+    <!--<link rel="stylesheet" href="lib/jquery-ui/jquery-ui.css">-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>JS6 lesson 7 Evgen Salyakin</title>-->
+    <!--<link rel="shortcut icon" href="../img/icon.png" type="image/x-icon">-->
+    <!--<script src="../node_modules/jquery/dist/jquery.js"></script>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="container-fluid bg_l7">-->
+    <!--<header class="wrapper text-xs-center">-->
+        <!--<h2 class="page-title"><img src="../img/icon.png" alt="page title"/>Lesson 7</h2>-->
+        <!--<h3>jQuery & localStorage</h3>-->
+        <!--<a href="../index.html">· Home page ·</a>-->
+        <!--<br/>-->
+        <!--<a href="https://github.com/EvgenSalyakin/evgensalyakin.github.io/tree/master/lesson_7">· My project on GitHub-->
+            <!--·</a>-->
+    <!--</header>-->
 
-    <div class="wrapper">
-        <div id="container">
+    <!--<div class="wrapper">-->
+        <!--<div id="container">-->
 
-            <div id="header"> To Do List </div>
+            <!--<div id="header"> To Do List </div>-->
 
-            <div class="task-list task-container" id="pending">
-                <h3>Pending</h3>
-                <!--<div class="todo-task">
-                    <div class="task-header">Sample Header</div>
-                    <div class="task-date">25/06/1992</div>
-                    <div class="task-description">Lorem Ipsum Dolor Sit Amet</div>
-                </div>-->
-            </div>
+            <!--<div class="task-list task-container" id="pending">-->
+                <!--<h3>Pending</h3>-->
+                <!--&lt;!&ndash;<div class="todo-task">-->
+                    <!--<div class="task-header">Sample Header</div>-->
+                    <!--<div class="task-date">25/06/1992</div>-->
+                    <!--<div class="task-description">Lorem Ipsum Dolor Sit Amet</div>-->
+                <!--</div>&ndash;&gt;-->
+            <!--</div>-->
 
-            <div class="task-list task-container" id="inProgress">
-                <h3>In Progress</h3>
-            </div>
+            <!--<div class="task-list task-container" id="inProgress">-->
+                <!--<h3>In Progress</h3>-->
+            <!--</div>-->
 
-            <div class="task-list task-container" id="completed">
-                <h3>Completed</h3>
-            </div>
+            <!--<div class="task-list task-container" id="completed">-->
+                <!--<h3>Completed</h3>-->
+            <!--</div>-->
 
-            <div class="task-list">
-                <h3>Add a task</h3>
-                <form id="todo-form">
-                    <input type="text" placeholder="Title" />
-                    <textarea placeholder="Description"></textarea>
-                    <input type="text" id="datepicker" placeholder="Due Date (dd/mm/yyyy)" />
-                    <input type="button" id='btnadd' class="btn btn-primary" value="Add Task" />
-                </form>
+            <!--<div class="task-list">-->
+                <!--<h3>Add a task</h3>-->
+                <!--<form id="todo-form">-->
+                    <!--<input type="text" placeholder="Title" />-->
+                    <!--<textarea placeholder="Description"></textarea>-->
+                    <!--<input type="text" id="datepicker" placeholder="Due Date (dd/mm/yyyy)" />-->
+                    <!--<input type="button" id='btnadd' class="btn btn-primary" value="Add Task" />-->
+                <!--</form>-->
 
-                <input type="button" class="btn btn-primary" value="Clear Data" onclick="todolist.clear();" />
+                <!--<input type="button" class="btn btn-primary" value="Clear Data" onclick="todolist.clear();" />-->
 
-                <div id="delete-div">
-                    Drag Here to Delete
-                </div>
-            </div>
-        </div>
-    </div>
+                <!--<div id="delete-div">-->
+                    <!--Drag Here to Delete-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
 
-    <footer class="wrapper text-xs-center">
-        <a href="../index.html">· Home page ·</a>
-        <br/>
-        <a href="https://github.com/EvgenSalyakin/evgensalyakin.github.io/tree/master/lesson_7">· My project on GitHub ·</a>
-        <p>Copyleft (&#8580;) 2016 by Evgeniy Salyakin</p>
-    </footer>
-    <!--<script src="dist/todolistJQ.js"></script>-->
-    <script src="dist/bundle.js"></script>
-    <script src="lib/jquery-ui/jquery-ui.js"></script>
-</div>
+    <!--<footer class="wrapper text-xs-center">-->
+        <!--<a href="../index.html">· Home page ·</a>-->
+        <!--<br/>-->
+        <!--<a href="https://github.com/EvgenSalyakin/evgensalyakin.github.io/tree/master/lesson_7">· My project on GitHub ·</a>-->
+        <!--<p>Copyleft (&#8580;) 2016 by Evgeniy Salyakin</p>-->
+    <!--</footer>-->
+    <!--&lt;!&ndash;<script src="dist/todolistJQ.js"></script>&ndash;&gt;-->
+    <!--<script src="dist/bundle.js"></script>-->
+    <!--<script src="lib/jquery-ui/jquery-ui.js"></script>-->
+<!--</div>-->
 
-</body>
-</html>
+<!--</body>-->
+<!--</html>-->
