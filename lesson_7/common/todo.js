@@ -1,15 +1,3 @@
-/*
- * @author Shaumik "Dada" Daityari
- * @copyright December 2013
- */
-
-/* Some info
- Using newer versions of jQuery and jQuery UI in place of the links given in problem statement
- All data is stored in local storage
- User data is extracted from local storage and saved in variable todo.data
- Otherwise, comments are provided at appropriate places
- */
-
 var todo = todo || {},
     data = JSON.parse(localStorage.getItem("todoData"));
 
@@ -57,7 +45,6 @@ data = data || {};
          description: "Blah Blah"
          });*/
 
-        // Adding drop function to each category of task
         $.each(codes, function (index, value) {
             $(value).droppable({
                 drop: function (event, ui) {
@@ -66,26 +53,20 @@ data = data || {};
                         id = css_id.replace(options.taskId, ""),
                         object = data[id];
 
-                    // Removing old element
                     removeElement(object);
 
-                    // Changing object code
                     object.code = index;
 
-                    // Generating new element
                     generateElement(object);
 
-                    // Updating Local Storage
                     data[id] = object;
                     localStorage.setItem("todoData", JSON.stringify(data));
 
-                    // Hiding Delete Area
                     $("#" + defaults.deleteDiv).hide();
                 }
             });
         });
 
-        // Adding drop function to delete div
         $("#" + options.deleteDiv).droppable({
             drop: function(event, ui) {
                 var element = ui.helper,
@@ -93,21 +74,17 @@ data = data || {};
                     id = css_id.replace(options.taskId, ""),
                     object = data[id];
 
-                // Removing old element
                 removeElement(object);
 
-                // Updating local storage
                 delete data[id];
                 localStorage.setItem("todoData", JSON.stringify(data));
 
-                // Hiding Delete Area
                 $("#" + defaults.deleteDiv).hide();
             }
         })
 
     };
 
-    // Add Task
     var generateElement = function(params){
         var parent = $(codes[params.code]),
             wrapper;
@@ -150,7 +127,6 @@ data = data || {};
 
     };
 
-    // Remove task
     var removeElement = function (params) {
         $("#" + defaults.taskId + params.id).remove();
     };
@@ -183,14 +159,11 @@ data = data || {};
             description: description
         };
 
-        // Saving element in local storage
         data[id] = tempData;
         localStorage.setItem("todoData", JSON.stringify(data));
 
-        // Generate Todo Element
         generateElement(tempData);
 
-        // Reset Form
         inputs[0].value = "";
         inputs[1].value = "";
         inputs[2].value = "";

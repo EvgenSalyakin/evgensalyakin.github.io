@@ -1,4 +1,3 @@
-/* nanoscrollbar */
 .nano .pane   { background: #888; }
 .nano .slider { background: #111; }
 
@@ -10,7 +9,6 @@
 }
 
 body .bg_l8 {
-    /* Override bootstrap properties */
     background-color: #374a5d !important;
     border: 0 !important;
     text-align: center;
