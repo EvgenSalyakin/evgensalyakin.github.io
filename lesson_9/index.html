@@ -24,22 +24,25 @@
     </header>
 
     <div class="wrapper bg">
-        <div id="container">
-            <h1>Facebook</h1>
-            <div id="fb-connect" data-fb-connect>
-                <!--   publish_pages,manage_pages,ads_management,read_page_mailboxes -->
-                <fb:login-button scope="public_profile,email,user_friends,user_hometown,user_location"
-                                 onlogin="checkLoginState();"></fb:login-button>
-                <div data-fb-user id="status"></div>
-            </div>
-
-            <h1>Google Map</h1>
-            <div id="google-map">
-                <div id="floating-panel">
-                    <input id="address" type="textbox" value="Sydney, NSW">
-                    <input id="submit" type="button" value="Geocode">
+        <div class="container">
+            <div class="block">
+                <h1>Facebook</h1>
+                <div id="fb-connect" data-fb-connect>
+                    <!--   publish_pages,manage_pages,ads_management,read_page_mailboxes -->
+                    <fb:login-button scope="public_profile,email,user_friends,user_hometown,user_location"
+                                     onlogin="checkLoginState();"></fb:login-button>
+                    <div data-fb-user id="status"></div>
                 </div>
-                <div id="map"></div>
+            </div>
+            <div class="block">
+                <h1>Google Map</h1>
+                <div id="google-map">
+                    <div id="floating-panel">
+                        <input id="address" type="textbox" value="Cherkasy, Ukraine">
+                        <input id="submit" type="button" value="Geocode">
+                    </div>
+                    <div id="map"></div>
+                </div>
             </div>
         </div>
     </div>

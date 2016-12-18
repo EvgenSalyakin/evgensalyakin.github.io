@@ -21,7 +21,8 @@ function geocodeAddress(geocoder, resultsMap) {
             var marker = new google.maps.Marker({
                 map: resultsMap,
                 position: results[0].geometry.location,
-                title: address+' lat/lng : '+lat+'/'+lng
+                title: address+' lat/lng : '+lat+'/'+lng,
+                label: lat+'/'+lng
             });
         } else {
             alert('Geocode was not successful for the following reason: ' + status);
