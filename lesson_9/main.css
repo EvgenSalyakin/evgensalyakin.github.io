@@ -7,9 +7,8 @@
 }
 
 #map {
-    height: 400px;
-    width: 70%;
-    margin-left: 15%
+    height: 500px;
+    width: auto;
 }
 
 #floating-panel {
@@ -24,4 +23,58 @@
     font-family: 'Roboto','sans-serif';
     line-height: 30px;
     padding-left: 10px;
+}
+
+.gm-style {
+    color: #002a80;
+}
+
+.center {
+    text-align: center;
+}
+
+.center img {
+    min-width: 200px;
+    width: 35%;
+}
+
+#qr-code {
+    margin: 15px 0;
+}
+
+#qr-code input {
+    background: #7a91c7;
+    border-radius: 15px;
+    border: 2px solid #ffffff;
+    color: #060857;
+    -webkit-appearance: none;
+    padding: 7px;
+    box-shadow: 2px 2px 5px #ffffff;
+    margin: 10px 0;
+}
+
+::-webkit-input-placeholder {
+    color: #616161; }
+:-moz-placeholder {
+    color: #616161; }
+::-moz-placeholder {
+    color: #616161; }
+:-ms-input-placeholder {
+    color: #616161; }
+
+#qr-code #qr-input {
+    width: 70%;
+    min-width: 150px;
+}
+
+#qr-code #qr-submit {
+    min-width: 70px;
+    width: 15%;
+    background: #341e9f;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+#qr-code #qr-submit:hover {
+    background: #1a0f50;
 }

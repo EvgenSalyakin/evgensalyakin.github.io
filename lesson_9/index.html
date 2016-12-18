@@ -15,18 +15,18 @@
 <body>
 <div class="container-fluid bg_l8">
     <header class="wrapper text-xs-center">
-        <h2 class="page-title"><img src="../img/icon.png" alt="page title"/>Lesson 8</h2>
+        <h2 class="page-title"><img src="../img/icon.png" alt="page title"/>Lesson 9</h2>
         <h3>jQuery. API. Get, Post, Ajax.</h3>
         <a href="../index.html">· Home page ·</a>
         <br/>
-        <a href="https://github.com/EvgenSalyakin/evgensalyakin.github.io/tree/master/lesson_8">· My project on GitHub
+        <a href="https://github.com/EvgenSalyakin/evgensalyakin.github.io/tree/master/lesson_9">· My project on GitHub
             ·</a>
     </header>
 
     <div class="wrapper bg">
         <div class="container">
             <div class="block">
-                <h1>Facebook</h1>
+                <h2>Facebook</h2>
                 <div id="fb-connect" data-fb-connect>
                     <!--   publish_pages,manage_pages,ads_management,read_page_mailboxes -->
                     <fb:login-button scope="public_profile,email,user_friends,user_hometown,user_location"
@@ -35,7 +35,8 @@
                 </div>
             </div>
             <div class="block">
-                <h1>Google Map</h1>
+                <h2>Google Map</h2>
+                <p>Lat & Lng in info-box on click marker</p>
                 <div id="google-map">
                     <div id="floating-panel">
                         <input id="address" type="textbox" value="Cherkasy, Ukraine">
@@ -44,13 +45,23 @@
                     <div id="map"></div>
                 </div>
             </div>
+
+            <div class="block center">
+                <h2>QR-code</h2>
+                <div id="qr-code">
+                    <span>URL:</span>
+                    <input id="qr-input" type="textbox" value="https://evgensalyakin.github.io/lesson_9/index.html">
+                    <input id="qr-submit" type="button" value="Generete">
+                </div>
+                <img id="qr-img"/>
+            </div>
         </div>
     </div>
 
     <footer class="wrapper text-xs-center">
         <a class="button" href="../index.html">· Home page ·</a>
         <br/>
-        <a href="https://github.com/EvgenSalyakin/evgensalyakin.github.io/tree/master/lesson_8">· My project on GitHub
+        <a href="https://github.com/EvgenSalyakin/evgensalyakin.github.io/tree/master/lesson_9">· My project on GitHub
             ·</a>
         <p>Copyleft (&#8580;) 2016 by Evgeniy Salyakin</p>
     </footer>
@@ -60,6 +71,7 @@
 <script src="view/connect-fb.js"></script>
 <script src="controller/button-fb-connect.js"></script>
 <script src="model/map.js"></script>
+<script src="model/qr-code.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIqn69WLbz4bdppI2bHoK7Xng_0HmujUI&signed_in=true&callback=initMap"
         async defer></script>
 </body>
