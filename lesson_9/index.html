@@ -39,8 +39,8 @@
                 <p>Lat & Lng in info-box on click marker</p>
                 <div id="google-map">
                     <div id="floating-panel">
-                        <input id="address" type="textbox" value="Cherkasy, Ukraine">
-                        <input id="submit" type="button" value="Geocode">
+                        <input id="gm-address" type="textbox" value="Cherkasy, Ukraine">
+                        <input id="gm-submit" type="button" value="Geocode">
                     </div>
                     <div id="map"></div>
                 </div>
@@ -71,6 +71,8 @@
 <script src="view/connect-fb.js"></script>
 <script src="controller/button-fb-connect.js"></script>
 <script src="model/map.js"></script>
+<script src="view/view-map.js"></script>
+<script src="controller/markers-on-map.js"></script>
 <script src="model/qr-code.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIqn69WLbz4bdppI2bHoK7Xng_0HmujUI&signed_in=true&callback=initMap"
         async defer></script>

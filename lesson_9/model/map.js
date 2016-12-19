@@ -1,43 +1,30 @@
-var label;
+var Map =  {
+    lat: 49.444433,
+    lng: 32.059766999999965,
 
-function initMap() {
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 8,
-        center: {lat: -34.397, lng: 150.644}
-    });
-    var geocoder = new google.maps.Geocoder();
-    label = 0;
-    document.getElementById('submit').addEventListener('click', function() {
-        geocodeAddress(geocoder, map);
-    });
-}
 
-function geocodeAddress(geocoder, resultsMap) {
-    var address = document.getElementById('address').value;
-    geocoder.geocode({'address': address}, function(results, status) {
-        if (status === google.maps.GeocoderStatus.OK) {
+    initMap:function () {
+        this.geocoder = new google.maps.Geocoder();
+    },
 
-            var lat = results[0].geometry.location.lat();
-            var lng = results[0].geometry.location.lng();
-            resultsMap.setCenter(results[0].geometry.location);
-
-            var infowindow = new google.maps.InfoWindow({
-                content: '<p><b>'+address+'</b><br>lat/lng: '+lat+'/'+lng+'</p>'
+    geocodeAddress: function (address) {
+        var that = this;
+        return new Promise(function (succes,fail) {
+            that.address = address;
+            that.geocoder.geocode({'address': address}, function (results, status) {
+                if (status === google.maps.GeocoderStatus.OK) {
+                    that.lat = results[0].geometry.location.lat();
+                    that.lng = results[0].geometry.location.lng();
+                    that.location = results[0].geometry.location;
+                    succes({
+                        location:that.location,
+                        formatted_address:results[0].formatted_address
+                    });
+                } else {
+                    alert('Geocode was not successful for the following reason: ' + status);
+                    fail();
+                }
             });
-
-            label++;
-            var marker = new google.maps.Marker({
-                map: resultsMap,
-                animation: google.maps.Animation.DROP,
-                position: results[0].geometry.location,
-                title: address+' lat/lng : '+lat+'/'+lng,
-                label: label.toString()
-            });
-            marker.addListener('click', function() {
-                infowindow.open(resultsMap, marker);
-            });
-        } else {
-            alert('Geocode was not successful for the following reason: ' + status);
-        }
-    });
-}
+        });
+    }
+};

@@ -4,7 +4,6 @@ function getQR() {
         url: "https://pierre2106j-qrcode.p.mashape.com/api",
         type: "GET",
         data: {
-            //backcolor=ffffff&ecl=H&forecolor=000000&pixel=4&text=https%3A%2F%2Fevgensalyakin.github.io%2Flesson_9%2Findex.html&type=url
             backcolor:"ffffff",
             ecl:"H",
             forecolor:"000000",
