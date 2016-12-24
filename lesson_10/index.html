@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <head>
+    <!--<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css"-->
+          <!--media="screen,projection">-->
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0"/>-->
     <title>JS6 lesson 10 Yevhenii Saliakin</title>
+
     <link rel="shortcut icon" href="../img/icon.png" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>-->
 </head>
 <body>
 <div class="container-fluid bg_l8">
@@ -23,7 +29,13 @@
         <div class="container">
             <div class="block">
                 <h2>News</h2>
-                <div id="news"></div>
+                <div id="news">
+                    <input type="submit" id="newsBTN" value="Получить новости"/>
+                    <p id="short-word">Short: </p>
+                    <p id="long-word">Long: </p>
+                    <p id="most-word">Most: </p>
+                    <p id="result"></p>
+                </div>
             </div>
         </div>
     </div>
