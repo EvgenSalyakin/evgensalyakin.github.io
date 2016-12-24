@@ -1,5 +1,7 @@
 $('#newsBTN').click(function () {
-    getNews();
+    getNews().then(function () {
+        $('.carousel').carousel();
+    });
 });
 
 $(document).ready(function(){
@@ -32,7 +34,7 @@ function processingNews(data) {
     var exceptions = ["а","і","в","у","на","під","з","та","про","вже","від","без","поки","коли","який","якої","його",
         "ще","якщо","їх","через","до","не","що","й","за","ле","то","майже","понад","як","так","ні"];
 
-    $(".carousel").empty();
+    $(".carousel").empty().removeClass("initialized");
     data.items.forEach(function (item) {
         news.push(item.title);
         text += " " + item.title;
