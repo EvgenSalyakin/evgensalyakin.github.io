@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS6 lesson 12 Yevhenii Saliakin</title>
+    <link rel="shortcut icon" href="../img/icon.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="style.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+
+    <!-- jQuery for bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+          crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="main.js"></script>
+
+</head>
+<body ng-app="PortfolioApp">
+<div class="container-fluid bg_l10">
+    <header class="wrapper text-xs-center">
+        <h2 class="page-title"><img src="../img/icon.png" alt="page title"/>Lesson 12</h2>
+        <h3>Angular JS.</h3>
+        <a href="../index.html">· Home page ·</a>
+        <br/>
+        <a href="https://github.com/EvgenSalyakin/evgensalyakin.github.io/tree/master/lesson_12">· My project on GitHub
+            ·</a>
+    </header>
+
+    <div class="wrapper bg">
+        <div class="container">
+            <div class="block">
+
+                <div ng-controller="PortfolioCtrl">
+                    <img src="../img/photo.jpg"/>
+                    {{totalScills}}
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="wrapper text-xs-center">
+        <a class="button" href="../index.html">· Home page ·</a>
+        <br/>
+        <a href="https://github.com/EvgenSalyakin/evgensalyakin.github.io/tree/master/lesson_10">· My project on GitHub
+            ·</a>
+        <p>Copyleft (&#8580;) 2016 by Yevhenii Saliakin</p>
+    </footer>
+</div>
+</body>
+</html>
